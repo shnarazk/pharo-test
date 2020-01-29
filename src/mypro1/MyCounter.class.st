@@ -17,6 +17,8 @@ MyCounter >> decrement [
 
 { #category : #updating }
 MyCounter >> increment [
+	"need document"
+
 	val := val + 1
 ]
 
