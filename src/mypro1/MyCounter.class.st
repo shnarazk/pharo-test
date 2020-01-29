@@ -2,7 +2,7 @@
 counter object
 "
 Class {
-	#name : #MyCount,
+	#name : #MyCounter,
 	#superclass : #Object,
 	#instVars : [
 		'val'
@@ -11,27 +11,27 @@ Class {
 }
 
 { #category : #updating }
-MyCount >> decrement [ 
-  val := val - 1
+MyCounter >> decrement [
+	val := val - 1
 ]
 
 { #category : #updating }
-MyCount >> increment [ 
- val := val + 1
+MyCounter >> increment [
+	val := val + 1
 ]
 
 { #category : #initalize }
-MyCount >> new [
+MyCounter >> new [
 	val := 0.
 	^ self
 ]
 
 { #category : #evaluating }
-MyCount >> value [
-   ^val
+MyCounter >> value [
+	^ val
 ]
 
 { #category : #updating }
-MyCount >> value: v [
-   val := v
+MyCounter >> value: v [
+	val := v
 ]
