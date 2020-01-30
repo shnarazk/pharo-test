@@ -19,7 +19,7 @@ LOCell >> initialize [
 	super initialize.
 	self label: ''.
 	self borderWidth: 2.
-	bounds := 0 @ 0 corner: 16 @ 16.
+	bounds := 0 @ 0 corner: 32 @ 32.
 	offColor := Color paleYellow.
 	onColor := Color paleBlue darker.
 	self useSquareCorners.

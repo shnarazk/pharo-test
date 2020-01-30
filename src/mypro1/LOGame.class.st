@@ -14,7 +14,7 @@ Class {
 LOGame >> cellsPerSide [
 	"The number of cells along each side of the game"
 
-	^ 20
+	^ 16
 ]
 
 { #category : #initialization }
