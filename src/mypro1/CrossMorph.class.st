@@ -1,3 +1,6 @@
+"
+Pharo By Example: Morph 
+"
 Class {
 	#name : #CrossMorph,
 	#superclass : #Morph,
