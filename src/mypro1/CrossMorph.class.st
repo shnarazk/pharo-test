@@ -14,21 +14,23 @@ CrossMorph >> containsPoint:	aPoint [
 
 { #category : #drawing }
 CrossMorph >> drawOn: aCanvas [
+	| topAndBottom |
 	aCanvas fillRectangle: self horizontalBar color: self color.
-	aCanvas fillRectangle: self verticalBar color: self color.
-	
+	topAndBottom := self verticalBar areasOutside: self horizontalBar.
+	topAndBottom
+		do: [ :each | aCanvas fillRectangle: each color: self color ]
 ]
 
 { #category : #private }
 CrossMorph >> horizontalBar [
 	| crossHeight |
-	crossHeight := self height / 3.0.
+	crossHeight := (self height / 3.0) rounded.
 	^ self bounds insetBy: 0 @ crossHeight 
 ]
 
 { #category : #private }
 CrossMorph >> verticalBar [
 	| crossWidth |
-	crossWidth  := self width / 3.0.
+	crossWidth  := (self width / 3.0) rounded.
 	^ self bounds insetBy: crossWidth @ 0
 ]
