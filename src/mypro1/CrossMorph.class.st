@@ -68,7 +68,9 @@ CrossMorph >> horizontalBar [
 { #category : #initialization }
 CrossMorph >> initialize [
 	super initialize.
-	isStepping := false
+	isStepping := false.
+	color := Color red.
+	bounds := 0 @ 0 extent: 200 @ 200.
 ]
 
 { #category : #'event handling' }
@@ -107,4 +109,10 @@ CrossMorph >> verticalBar [
 	| crossWidth |
 	crossWidth  := (self width / 3.0) rounded.
 	^ self bounds insetBy: crossWidth @ 0
+]
+
+{ #category : #'dropping/grabbing' }
+CrossMorph >> wantsDroppedMorph: aMorph event: anEvent [
+	^ aMorph color = Color yellow 
+		"and: [ super wantsDroppedMorph: aMorph event: anEvent ]"
 ]
