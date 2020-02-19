@@ -15,6 +15,12 @@ MyExampleSetTest >> setUp [
 ]
 
 { #category : #tests }
+MyExampleSetTest >> testIllegal [ 
+	self should: [ empty at: 5 ] raise: Error.
+	self should: [ empty at: 5 put: #zork ] raise: Error
+]
+
+{ #category : #tests }
 MyExampleSetTest >> testIncludes [
 	"Testing set membership"
 
