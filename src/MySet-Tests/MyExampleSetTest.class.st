@@ -8,6 +8,13 @@ Class {
 	#category : #'MySet-Tests'
 }
 
+{ #category : #'as yet unclassified' }
+MyExampleSetTest class >> resources [
+	"Associate the resource with this class of test cases"
+
+	^ {MyTestResource}
+]
+
 { #category : #running }
 MyExampleSetTest >> setUp [ 
 	empty := Set new.
